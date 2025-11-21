@@ -102,13 +102,13 @@ export function Globe({ className, config = GLOBE_CONFIG }: GlobeProps) {
       ...config,
       width: width * 2,
       height: width * 2,
-      onRender: (state) => {
+      onRender: (state: any) => {
         if (!pointerInteracting.current) phi += 0.005;
         state.phi = phi + rs.get();
         state.width = width * 2;
         state.height = width * 2;
       },
-    });
+    } as any);
 
     setTimeout(() => {
       if (canvasRef.current) {

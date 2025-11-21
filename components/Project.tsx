@@ -1,6 +1,22 @@
 import React, { useState } from "react";
 import ProjectDetails from "./ProjectDetails";
 
+interface Tag {
+  id: number;
+  name: string;
+  path: string;
+}
+
+interface ProjectProps {
+  title: string;
+  description: string;
+  subDescription: string[]; 
+  href: string;
+  image: string;
+  tags: Tag[];
+  setPreview: (image: string | null) => void; 
+}
+
 const Project = ({
   title,
   description,
@@ -9,7 +25,7 @@ const Project = ({
   image,
   tags,
   setPreview,
-}) => {
+}: ProjectProps) => {
   const [isHidden, setIsHidden] = useState(false);
   return (
     <>

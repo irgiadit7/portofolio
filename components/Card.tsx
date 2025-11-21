@@ -1,4 +1,6 @@
 'use client'
+import { motion } from "motion/react";
+import { RefObject } from "react";
 
 interface CardProps {
   style: any; 
@@ -7,7 +9,6 @@ interface CardProps {
   containerRef: RefObject<HTMLDivElement | null>; 
 }
 
-import { motion } from "motion/react";
 const Card = ({ style, text, image, containerRef }: CardProps) => {
   return image && !text ? (
     <motion.img

@@ -3,6 +3,19 @@
 import { twMerge } from "tailwind-merge";
 import React, { useEffect, useRef, useState } from "react";
 
+type Circle = {
+  x: number;
+  y: number;
+  translateX: number;
+  translateY: number;
+  size: number;
+  alpha: number;
+  targetAlpha: number;
+  dx: number;
+  dy: number;
+  magnetism: number;
+};
+
 function MousePosition() {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
@@ -10,7 +23,7 @@ function MousePosition() {
   });
 
   useEffect(() => {
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event: MouseEvent) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
     };
 
@@ -24,7 +37,7 @@ function MousePosition() {
   return mousePosition;
 }
 
-function hexToRgb(hex) {
+function hexToRgb(hex: string) {
   hex = hex.replace("#", "");
 
   if (hex.length === 3) {
@@ -41,6 +54,18 @@ function hexToRgb(hex) {
   return [red, green, blue];
 }
 
+interface ParticlesProps {
+  className?: string;
+  quantity?: number;
+  staticity?: number;
+  ease?: number;
+  size?: number;
+  refresh?: boolean;
+  color?: string;
+  vx?: number;
+  vy?: number;
+}
+
 export const Particles = ({
   className = "",
   quantity = 100,
@@ -52,17 +77,17 @@ export const Particles = ({
   vx = 0,
   vy = 0,
   ...props
-}) => {
-  const canvasRef = useRef(null);
-  const canvasContainerRef = useRef(null);
-  const context = useRef(null);
-  const circles = useRef([]);
+}: ParticlesProps) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasContainerRef = useRef<HTMLDivElement>(null);
+  const context = useRef<CanvasRenderingContext2D | null>(null);
+  const circles = useRef<Circle[]>([]);
   const mousePosition = MousePosition();
-  const mouse = useRef({ x: 0, y: 0 });
-  const canvasSize = useRef({ w: 0, h: 0 });
+  const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+  const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
   const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
-  const rafID = useRef(null);
-  const resizeTimeout = useRef(null);
+  const rafID = useRef<number | null>(null);
+  const resizeTimeout = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -140,7 +165,7 @@ export const Particles = ({
     }
   };
 
-  const circleParams = () => {
+  const circleParams = (): Circle => {
     const x = Math.floor(Math.random() * canvasSize.current.w);
     const y = Math.floor(Math.random() * canvasSize.current.h);
     const translateX = 0;
@@ -167,7 +192,7 @@ export const Particles = ({
 
   const rgb = hexToRgb(color);
 
-  const drawCircle = (circle, update = false) => {
+  const drawCircle = (circle: Circle, update = false) => {
     if (context.current) {
       const { x, y, translateX, translateY, size, alpha } = circle;
       context.current.translate(translateX, translateY);
@@ -203,7 +228,7 @@ export const Particles = ({
     }
   };
 
-  const remapValue = (value, start1, end1, start2, end2) => {
+  const remapValue = (value: number, start1: number, end1: number, start2: number, end2: number) => {
     const remapped =
       ((value - start1) * (end2 - start2)) / (end1 - start1) + start2;
     return remapped > 0 ? remapped : 0;

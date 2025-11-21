@@ -2,9 +2,20 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
-export const Timeline = ({ data }) => {
-  const ref = useRef(null);
-  const containerRef = useRef(null);
+interface TimelineEntry {
+  title: string;
+  job: string;
+  date: string;
+  contents: string[];
+}
+
+interface TimelineProps {
+  data: TimelineEntry[];
+}
+
+export const Timeline = ({ data }: TimelineProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
 
   useEffect(() => {

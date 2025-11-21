@@ -4,6 +4,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "./../components/Alert";
 import { Particles } from "./../components/Particles";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -14,10 +15,12 @@ const Contact = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState("success");
   const [alertMessage, setAlertMessage] = useState("");
-  const handleChange = (e) => {
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  const showAlertMessage = (type, message) => {
+
+  const showAlertMessage = (type: string, message: string) => {
     setAlertType(type);
     setAlertMessage(message);
     setShowAlert(true);
@@ -25,7 +28,8 @@ const Contact = () => {
       setShowAlert(false);
     }, 5000);
   };
-  const handleSubmit = async (e) => {
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
 
@@ -52,6 +56,7 @@ const Contact = () => {
       showAlertMessage("danger", "Somthing went wrong!");
     }
   };
+
   return (
     <section id="contact" className="relative flex items-center c-space section-spacing">
       <Particles
@@ -66,7 +71,7 @@ const Contact = () => {
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Let&apos;s Talk</h2>
           <p className="font-normal text-neutral-400">
-            Whether you&apos;re loking to build a new website, improve your existing
+            Whether you&apos;re loking to build a new software, improve your existing
             platform, or bring a unique project to life, I&apos;m here to help
           </p>
         </div>
@@ -110,8 +115,7 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
-              type="text"
-              rows="4"
+              rows={4} 
               className="field-input field-input-focus"
               placeholder="Share your thoughts..."
               autoComplete="message"

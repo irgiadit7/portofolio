@@ -136,3 +136,40 @@ body {
 .field-input-focus {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
 }
+
+
+/* --- MODERN SCROLLBAR STYLING --- */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #333; 
+  border-radius: 10px; 
+  border: 2px solid transparent; 
+  background-clip: content-box; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+
+::-webkit-scrollbar-thumb:active {
+  background: #888;
+}
+
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #333 transparent;
+}

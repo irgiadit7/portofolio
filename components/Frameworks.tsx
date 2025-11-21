@@ -17,7 +17,6 @@ export function Frameworks() {
   ];
    
   return (
-    
     <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">
       <OrbitingCircles iconSize={40}>
         {skills.map((skill, index) => (
@@ -33,6 +32,6 @@ export function Frameworks() {
   );
 }
 
-const Icon = ({ src }) => (
-  <img src={src} className="duration-200 rounded-sm hover:scale-110" />
+const Icon = ({ src }: { src: string }) => (
+  <img src={src} className="duration-200 rounded-sm hover:scale-110" alt="framework-icon" />
 );

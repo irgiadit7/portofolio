@@ -1,11 +1,18 @@
-
 import { twMerge } from "tailwind-merge";
 import Marquee from "./../components/Marquee";
 import { reviews } from "../constants";
+
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
-const ReviewCard = ({ img, name, username, body }) => {
+interface ReviewCardProps {
+  img: string;
+  name: string;
+  username: string;
+  body: string;
+}
+
+const ReviewCard = ({ img, name, username, body }: ReviewCardProps) => {
   return (
     <figure
       className={twMerge(
