@@ -10,7 +10,7 @@ export const myProjects = [
       "Designed a scalable backend with Prisma ORM and Neon (Serverless PostgreSQL) for efficient data handling.",
       "Built a responsive interface with Next.js and Tailwind CSS, featuring appointment scheduling and doctor dashboards.",
     ],
-    href: "https://github.com/irgiadit7", 
+    href: "https://solvion-dentsis-gzvki.sevalla.app/", 
     logo: "",
     image: "/assets/projects/Solvion Dentsis.png",
     tags: [
@@ -109,7 +109,7 @@ export const myProjects = [
       "Implemented secure user authentication and role-based access control (RBAC).",
       "Integrated a robust database system (PostgreSQL) to manage course content and user progress tracking.",
     ],
-    href: "https://github.com/irgiadit7",
+    href: "https://mission-fe-2-advance.vercel.app/",
     logo: "",
     image: "/assets/projects/VideoBelajar.png",
     tags: [
