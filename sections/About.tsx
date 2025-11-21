@@ -34,35 +34,35 @@ const About = () => {
             className="flex items-center justify-center w-full h-full"
           >
             <p className="flex items-end text-5xl text-gray-500">
-              CODE IS CRAFT
+              I LOVE ROBOTICS!!!
             </p>
             <Card
-              style={{ rotate: "75deg", top: "30%", left: "20%" }}
-              text="GRASP"
+              style={{ rotate: "15deg", top: "30%", left: "35%" }}
+                image="assets/logos/cplusplus.svg"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "-30deg", top: "60%", left: "45%" }}
-              text="SOLID"
+              style={{ top: "12%", left: "65%", width: "30%", borderRadius: "10px", zIndex: 50 }}
+              image="assets/logos/memes.png"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
-              text="Design Patterns"
+              style={{ rotate: "90deg", bottom: "32%", left: "50%" }}
+                 image="assets/logos/python.svg"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "55%", left: "0%" }}
-              text="Design Principles"
+              text="Talk is cheap"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "20deg", top: "10%", left: "38%" }}
-              text="SRP"
+              style={{ rotate: "20deg", top: "10%", left: "32%" }}
+              text="Show Me the code"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
+              style={{ rotate: "30deg", top: "70%", left: "50%" }}
               image="assets/logos/visualstudiocode.svg"
               containerRef={grid2Container}
             />
@@ -73,7 +73,8 @@ const About = () => {
             />
             <Card
               style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/react.svg"
+            
+               image="assets/logos/typescript.svg"
               containerRef={grid2Container}
             />
           </div>
