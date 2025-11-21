@@ -7,16 +7,19 @@ Source: https://sketchfab.com/3d-models/tenhun-falling-spaceman-fanart-9fd80b6a2
 Title: Tenhun Falling spaceman (FanArt)
 */
 
+'use client'
+
 import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useMotionValue, useSpring } from "motion/react";
 import { useFrame } from "@react-three/fiber";
+import * as THREE from "three";
 
-export function Astronaut(props) {
-  const group = useRef();
+export function Astronaut(props: any) {
+  const group = useRef<THREE.Group>(null);
   const { nodes, materials, animations } = useGLTF(
     "/models/tenhun_falling_spaceman_fanart.glb"
-  );
+  ) as any;
   const { actions } = useAnimations(animations, group);
   useEffect(() => {
     if (animations.length > 0) {
@@ -30,7 +33,9 @@ export function Astronaut(props) {
     ySpring.set(-1);
   }, [ySpring]);
   useFrame(() => {
-    group.current.position.y = ySpring.get();
+    if (group.current) {
+      group.current.position.y = ySpring.get();
+    }
   });
   return (
     <group
