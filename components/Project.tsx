@@ -18,17 +18,17 @@ const Project = ({
         onMouseEnter={() => setPreview(image)}
         onMouseLeave={() => setPreview(null)}
       >
-        <div>
+        <div className="w-full sm:w-auto">
           <p className="text-2xl">{title}</p>
-          <div className="flex gap-5 mt-2 text-sand">
+          <div className="flex flex-wrap gap-x-4 gap-y-2 mt-3 text-sand">
             {tags.map((tag) => (
-              <span key={tag.id}>{tag.name}</span>
+              <span key={tag.id} className="text-sm sm:text-base whitespace-nowrap">{tag.name}</span>
             ))}
           </div>
         </div>
         <button
           onClick={() => setIsHidden(true)}
-          className="flex items-center gap-1 cursor-pointer hover-animation"
+          className="flex items-center gap-1 cursor-pointer hover-animation shrink-0"
         >
           Read More
           <img src="assets/arrow-right.svg" className="w-5" />
