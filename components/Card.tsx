@@ -1,7 +1,14 @@
 'use client'
 
+interface CardProps {
+  style: any; 
+  text?: string; 
+  image?: string;
+  containerRef: RefObject<HTMLDivElement | null>; 
+}
+
 import { motion } from "motion/react";
-const Card = ({ style, text, image, containerRef }) => {
+const Card = ({ style, text, image, containerRef }: CardProps) => {
   return image && !text ? (
     <motion.img
       className="absolute w-15 cursor-grab"

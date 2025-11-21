@@ -6,8 +6,10 @@ import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/Frameworks";
 
+
+
 const About = () => {
-  const grid2Container = useRef();
+ const grid2Container = useRef<HTMLDivElement>(null)
   return (
     <section className="c-space section-spacing" id="about">
       <h2 className="text-heading">About Me</h2>
@@ -21,8 +23,9 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I&apos;m Irgi Adit Pratama</p>
             <p className="subtext">
-              Over the last 1 years, I developed my frontend and backend dev
-              skills to deliver dynamic and software and web applications.
+              A Fullstack Developer driven by engineering excellence. I build
+              scalable web and mobile apps with Next.js and React Native, while
+              exploring the future of AI and Robotics.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -105,7 +108,7 @@ const About = () => {
           <div className="z-10 w-[50%]">
             <p className="headText">Teck Stack</p>
             <p className="subtext">
-              I specialize in a variety of languages, frameworks, and tools taht
+              I specialize in a variety of languages, frameworks, and tools that
               allow me to build robust and scalable applications
             </p>
           </div>

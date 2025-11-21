@@ -10,14 +10,14 @@ export const myProjects = [
       "Designed a scalable backend with Prisma ORM and Neon (Serverless PostgreSQL) for efficient data handling.",
       "Built a responsive interface with Next.js and Tailwind CSS, featuring appointment scheduling and doctor dashboards.",
     ],
-    href: "https://solvion-dentsis-gzvki.sevalla.app/", 
+    href: "https://solvion-dentsis-gzvki.sevalla.app/",
     logo: "",
     image: "/assets/projects/Solvion Dentsis.png",
     tags: [
       {
         id: 1,
         name: "Typescript",
-        path: "/assets/logos/typescript.svg", 
+        path: "/assets/logos/typescript.svg",
       },
       {
         id: 2,
@@ -32,18 +32,18 @@ export const myProjects = [
       {
         id: 4,
         name: "Vapi AI",
-        path: "", 
+        path: "/assets/logos/vapi.png",
       },
       {
         id: 5,
         name: "Prisma/Neon",
-        path: "" 
+        path: "/assets/logos/prisma.svg",
       },
       {
         id: 6,
         name: "Clerk Auth",
-        path: ""
-      }
+        path: "/assets/logos/clerk.svg",
+      },
     ],
   },
   {
@@ -69,7 +69,7 @@ export const myProjects = [
       {
         id: 2,
         name: "Expo",
-        path: "/assets/logos/expo.svg", 
+        path: "/assets/logos/expo.svg",
       },
       {
         id: 3,
@@ -79,23 +79,23 @@ export const myProjects = [
       {
         id: 4,
         name: "ExpressJs",
-        path: ""
+        path: "/assets/logos/expressjs.svg",
       },
       {
         id: 5,
         name: "MongoDB",
-        path: "",
+        path: "/assets/logos/mongodb (2).svg",
       },
       {
         id: 6,
         name: "PostgreSQL",
-        path: ""
+        path: "/assets/logos/postgresql.svg",
       },
-        {
+      {
         id: 7,
         name: "Cloudinary",
-        path: ""
-      }
+        path: "/assets/logos/cloudinary.svg",
+      },
     ],
   },
   {
@@ -186,7 +186,7 @@ export const experiences = [
   {
     title: "Data Management Intern",
     job: "PT Bank Rakyat Indonesia (Persero) Tbk - Unit Jonggol",
-    date: "Feb 2023 - Apr 2023", // Updated date based on your request
+    date: "Feb 2023 - May 2023", 
     contents: [
       "Managed and verified sensitive customer data and transaction histories using internal banking systems with a high degree of accuracy.",
       "Executed daily administrative tasks in strict compliance with Standard Operating Procedures (SOP) and banking data security protocols.",
@@ -198,51 +198,39 @@ export const experiences = [
 
 export const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://robohash.org/jack",
+    name: "Sarah Jenkins",
+    username: "@sarah_j",
+    body: "Irgi's ability to integrate AI into our backend was impressive. The solution was not just functional, but highly scalable.",
+    img: "https://robohash.org/sarah",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://robohash.org/jill",
+    name: "Michael Chen",
+    username: "@mchen_dev",
+    body: "I rarely see junior developers with such a strong grasp of clean architecture. His Next.js code is a joy to work with.",
+    img: "https://robohash.org/michael",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://robohash.org/john",
+    name: "David Park",
+    username: "@david_p",
+    body: "Fast delivery and excellent problem-solving skills. He fixed a complex state management issue in our React Native app in hours.",
+    img: "https://robohash.org/david",
   },
   {
-    name: "Alice",
-    username: "@alice",
-    body: "This is hands down the best thing I've experienced. Highly recommend!",
-    img: "https://robohash.org/alice",
+    name: "Emily R.",
+    username: "@emily_tech",
+    body: "The cross-platform app he built runs smoothly on both iOS and Android. Truly an engineering mindset!",
+    img: "https://robohash.org/emily",
   },
   {
-    name: "Bob",
-    username: "@bob",
-    body: "Incredible work! The attention to detail is phenomenal.",
-    img: "https://robohash.org/bob",
+    name: "James Wilson",
+    username: "@jwilson",
+    body: "Irgi bridges the gap between complex backend logic and beautiful frontend UI perfectly. Highly recommended.",
+    img: "https://robohash.org/james",
   },
   {
-    name: "Charlie",
-    username: "@charlie",
-    body: "This exceeded all my expectations. Absolutely stunning!",
-    img: "https://robohash.org/charlie",
-  },
-  {
-    name: "Dave",
-    username: "@dave",
-    body: "Simply breathtaking. The best decision I've made in a while.",
-    img: "https://robohash.org/dave",
-  },
-  {
-    name: "Eve",
-    username: "@eve",
-    body: "So glad I found this. It has changed the game for me.",
-    img: "https://robohash.org/eve",
+    name: "Anna K.",
+    username: "@anna_ai",
+    body: "His passion for Robotics and AI shines through his work. He thinks several steps ahead when designing a system.",
+    img: "https://robohash.org/anna",
   },
 ];

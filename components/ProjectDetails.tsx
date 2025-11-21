@@ -1,4 +1,21 @@
 import { motion } from "motion/react";
+
+interface Tag {
+  id: number;
+  name: string;
+  path: string;
+}
+
+interface ProjectDetailsProps {
+  title: string;
+  description: string;
+  subDescription: string[];
+  image: string;
+  tags: Tag[];
+  href: string;
+  closeModal: () => void;
+}
+
 const ProjectDetails = ({
   title,
   description,
@@ -7,17 +24,17 @@ const ProjectDetails = ({
   tags,
   href,
   closeModal,
-}) => {
+}: ProjectDetailsProps) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm">
       <motion.div
-        className="relative max-w-2xl border shadow-sm rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10"
+        className="relative max-w-2xl w-full border shadow-sm rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10 max-h-[100vh] overflow-y-auto"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
       >
         <button
           onClick={closeModal}
-          className="absolute p-2 rounded-sm top-5 right-5 bg-midnight hover:bg-gray-500"
+          className="absolute p-2 rounded-sm top-5 cursor-pointer right-5 bg-midnight hover:bg-gray-500"
         >
           <img src="assets/close.svg" className="w-6 h-6" />
         </button>
@@ -28,8 +45,8 @@ const ProjectDetails = ({
           {subDescription.map((subDesc, index) => (
             <p className="mb-3 font-normal text-neutral-400">{subDesc}</p>
           ))}
-          <div className="flex items-center justify-between mt-4">
-            <div className="flex gap-3">
+          <div className="flex flex-col gap-5 mt-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-wrap gap-3">
               {tags.map((tag) => (
                 <img
                   key={tag.id}

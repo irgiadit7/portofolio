@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
+
 function Navigation() {
   return (
     <ul className="nav-ul">
@@ -29,17 +30,19 @@ function Navigation() {
     </ul>
   );
 }
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
+    <div className="fixed inset-x-0 z-50 w-full backdrop-blur-md bg-black/50 border-b border-white/15 transition-all duration-500">
       <div className="mx-auto c-space max-w-7xl">
-        <div className="flex items-center justify-between py-2 sm:py-0">
+        <div className="flex items-center justify-between py-2"> 
           <Link
             href="/"
             className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
           >
-            Irgi Adit Pratama
+            &lt;Irgi /&gt;
           </Link>
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -56,15 +59,17 @@ const Navbar = () => {
           </nav>
         </div>
       </div>
+      
+      {/* Mobile */}
       {isOpen && (
         <motion.div
-          className="block overflow-hidden text-center sm:hidden"
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          style={{ maxHeight: "100vh" }}
-          transition={{ duration: 1 }}
+          className="block overflow-hidden border-t border-white/15 bg-black/50 sm:hidden" 
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-          <nav className="pb-5">
+          <nav className="py-5">
             <Navigation />
           </nav>
         </motion.div>

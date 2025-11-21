@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useState } from "react";
 import Project from "../components/Project";
@@ -16,6 +16,7 @@ const Projects = () => {
   const [preview, setPreview] = useState(null);
   return (
     <section
+      id="work"
       onMouseMove={handleMouseMove}
       className="relative c-space pt-15 md:pt-20"
     >

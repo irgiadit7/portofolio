@@ -3,12 +3,28 @@
 import createGlobe from "cobe";
 import { useMotionValue, useSpring } from "motion/react";
 import { useEffect, useRef } from "react";
-
 import { twMerge } from "tailwind-merge";
 
 const MOVEMENT_DAMPING = 1400;
 
-const GLOBE_CONFIG = {
+interface GlobeConfig {
+  width?: number;
+  height?: number;
+  onRender?: (state: Record<string, any>) => void;
+  devicePixelRatio?: number;
+  phi?: number;
+  theta?: number;
+  dark?: number;
+  diffuse?: number;
+  mapSamples?: number;
+  mapBrightness?: number;
+  baseColor?: [number, number, number];
+  markerColor?: [number, number, number];
+  glowColor?: [number, number, number];
+  markers?: { location: [number, number]; size: number }[];
+}
+
+const GLOBE_CONFIG: GlobeConfig = {
   width: 800,
   height: 800,
   onRender: () => {},
@@ -36,11 +52,16 @@ const GLOBE_CONFIG = {
   ],
 };
 
-export function Globe({ className, config = GLOBE_CONFIG }) {
+interface GlobeProps {
+  className?: string;
+  config?: GlobeConfig;
+}
+
+export function Globe({ className, config = GLOBE_CONFIG }: GlobeProps) {
   let phi = 0;
   let width = 0;
-  const canvasRef = useRef(null);
-  const pointerInteracting = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
 
   const r = useMotionValue(0);
@@ -50,14 +71,14 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
     stiffness: 100,
   });
 
-  const updatePointerInteraction = (value) => {
+  const updatePointerInteraction = (value: number | null) => {
     pointerInteracting.current = value;
     if (canvasRef.current) {
       canvasRef.current.style.cursor = value !== null ? "grabbing" : "grab";
     }
   };
 
-  const updateMovement = (clientX) => {
+  const updateMovement = (clientX: number) => {
     if (pointerInteracting.current !== null) {
       const delta = clientX - pointerInteracting.current;
       pointerInteractionMovement.current = delta;
@@ -75,6 +96,8 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
     window.addEventListener("resize", onResize);
     onResize();
 
+    if (!canvasRef.current) return;
+
     const globe = createGlobe(canvasRef.current, {
       ...config,
       width: width * 2,
@@ -87,7 +110,12 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
       },
     });
 
-    setTimeout(() => (canvasRef.current.style.opacity = "1"), 0);
+    setTimeout(() => {
+      if (canvasRef.current) {
+        canvasRef.current.style.opacity = "1";
+      }
+    }, 0);
+
     return () => {
       globe.destroy();
       window.removeEventListener("resize", onResize);
