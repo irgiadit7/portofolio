@@ -1,4 +1,4 @@
-# <Irgi /> | Engineering Interactive Experiences
+# <b>&lt;Irgi /&gt;</b>| Engineering Interactive Experiences
 
 ![Banner](public/assets/coding-pov.png)
 
@@ -84,5 +84,5 @@ I am open to **freelance work**, **collaborations**, or just discussing **Roboti
 ---
 
 <p align="center">
-  <i>Crafted with ❤️, ☕, and a lot of &lt;code /&gt; by <b>Irgi</b>.</i>
+  <i>Crafted with ❤️, ☕, and a lot of &lt;code /&gt; by <b>&lt;Irgi /&gt;</b></i>
 </p>
