@@ -1,4 +1,4 @@
-# <b>&lt;Irgi /&gt;</b>| Engineering Interactive Experiences
+# &lt;Irgi /&gt; | Engineering Interactive Experiences
 
 ![Banner](public/assets/coding-pov.png)
 
@@ -23,7 +23,7 @@
 
 Hi, I'm **Irgi Adit Pratama**.
 
-I am a **Fullstack Developer** with a deep passion for **AI, Robotics, and Software Engineering**. I don't just build websites; I build interactive systems. My approach combines rigorous engineering principles with creative design to solve complex problems.
+I am a **Software Engineer** focused on **AI-Driven Product Innovation**. I don't just build websites; I build interactive systems. My approach combines rigorous engineering principles with creative design to solve complex problems.
 
 Currently focusing on **Next.js**, **React Native**, and exploring the intersection of **Web Technologies and Artificial Intelligence**.
 
