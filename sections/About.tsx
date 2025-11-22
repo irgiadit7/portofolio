@@ -34,8 +34,12 @@ const About = () => {
         <div className="grid-default-color grid-2">
           <div
             ref={grid2Container}
-            className="flex items-center justify-center w-full h-full"
+            className="relative flex items-center justify-center w-full h-full overflow-hidden"
           >
+            <div className="absolute top-[-8] md:top-1  left-4 z-50 px-3 py-1.5 text-xs font-bold text-white rounded-full bg-black/5 backdrop-blur-md border border-white/10 pointer-events-none flex items-center gap-2">
+               <span>💡</span>
+               <span>Drag & Throw items to clean up!</span>
+             </div>
             <p className="flex items-end text-5xl text-gray-500">
               I LOVE ROBOTICS!!!
             </p>
@@ -47,16 +51,6 @@ const About = () => {
             <Card
               style={{ rotate: "90deg", bottom: "32%", left: "80%" }}
                  image="assets/logos/python.svg"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "50%", left: "10%" }}
-              text="Talk is cheap"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "20deg", top: "10%", left: "32%" }}
-              text="Show Me the code"
               containerRef={grid2Container}
             />
             <Card
@@ -73,6 +67,16 @@ const About = () => {
               style={{ rotate: "-45deg", top: "15%", left: "10%" }}
             
                image="assets/logos/typescript.svg"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "20deg", top: "10%", left: "32%" }}
+              text="Show Me the code"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "-45deg", top: "50%", left: "10%" }}
+              text="Talk is cheap"
               containerRef={grid2Container}
             />
             <Card

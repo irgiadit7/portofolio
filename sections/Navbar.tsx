@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <div className="fixed inset-x-0 z-50 w-full backdrop-blur-md bg-black/50 border-b border-white/15 transition-all duration-500">
       <div className="mx-auto c-space max-w-7xl">
-        <div className="flex items-center justify-between py-2"> 
+        <div className="flex items-center justify-between py-2 md:py-3"> 
           <Link
             href="/"
             className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"

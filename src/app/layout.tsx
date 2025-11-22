@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NextTopLoader from 'nextjs-toploader';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,12 +41,12 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://your-domain.com"), 
+  metadataBase: new URL("https://portofolio-c8nkbfsxo-irgis-projects-642c06d1.vercel.app"), 
   openGraph: {
     title: "Irgi Adit Pratama | Fullstack Developer",
     description:
       "Explore the portfolio of Irgi Adit Pratama, featuring projects in Web Development, Mobile Apps, and AI solutions.",
-    url: "https://your-domain.com",
+    url: "/",
     siteName: "Irgi Adit Pratama Portfolio",
     images: [
       {
@@ -91,6 +92,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
       >
+      <NextTopLoader 
+          color="#2299DD"
+          initialPosition={0.08}
+          crawlSpeed={200}
+          height={3}
+          crawl={true}
+          showSpinner={false}
+          easing="ease"
+          speed={200}
+        />
         {children}
       </body>
     </html>
