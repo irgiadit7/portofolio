@@ -23,9 +23,8 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I&apos;m Irgi Adit Pratama</p>
             <p className="subtext">
-              A Fullstack Developer driven by engineering excellence. I build
-              scalable web and mobile apps with Next.js and React Native, while
-              exploring the future of AI and Robotics.
+            A Software Engineer focused on AI-Driven Product Innovation. 
+              I build scalable web and mobile applications, blending engineering excellence with intelligent systems to create impactful products.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -36,7 +35,7 @@ const About = () => {
             ref={grid2Container}
             className="relative flex items-center justify-center w-full h-full overflow-hidden"
           >
-            <div className="absolute top-[-8] md:top-1  left-4 z-50 px-3 py-1.5 text-xs font-bold text-white rounded-full bg-black/5 backdrop-blur-md border border-white/10 pointer-events-none flex items-center gap-2">
+            <div className="absolute -top-2 md:top-1  left-4 z-50 px-3 py-1.5 text-xs font-bold text-white rounded-full bg-black/5 backdrop-blur-md border border-white/10 pointer-events-none flex items-center gap-2">
                <span>💡</span>
                <span>Drag & Throw items to clean up!</span>
              </div>

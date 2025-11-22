@@ -15,22 +15,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Irgi Adit Pratama | Fullstack Developer & AI Enthusiast",
+    default: "Irgi Adit Pratama | Software Engineer & AI-Driven Product Innovation",
     template: "%s | Irgi Adit Pratama",
   },
   description:
-    "Portfolio of Irgi Adit Pratama, a Fullstack Developer specializing in Next.js, React Native, AI Integration, and Robotics. Based in Indonesia.",
-  keywords: [
+    "Portfolio of Irgi Adit Pratama, a Software Engineer focused on AI-Driven Product Innovation. Building scalable, intelligent solutions with Next.js, React Native, and Robotics.",
+     keywords: [
     "Irgi Adit Pratama",
-    "Fullstack Developer",
     "Software Engineer",
-    "Frontend Developer",
-    "Backend Developer",
+    "AI-Driven Product Innovation",
+    "Product Engineer",
+    "AI Engineer",
+    "Fullstack Developer",
     "Next.js",
     "React Native",
-    "AI Engineer",
     "Robotics",
-    "Portfolio",
     "Indonesia",
   ],
   authors: [{ name: "Irgi Adit Pratama", url: "https://github.com/irgiadit7" }],
@@ -43,9 +42,9 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://portofolio-pi-tawny-84.vercel.app/"), 
   openGraph: {
-    title: "Irgi Adit Pratama | Fullstack Developer",
+   title: "Irgi Adit Pratama | Software Engineer & AI-Driven Product Innovation",
     description:
-      "Explore the portfolio of Irgi Adit Pratama, featuring projects in Web Development, Mobile Apps, and AI solutions.",
+      "Explore the portfolio of Irgi Adit Pratama, featuring engineering solutions in Web, Mobile, and AI-Driven Product Innovation.",
     url: "/",
     siteName: "Irgi Adit Pratama Portfolio",
     images: [
@@ -61,9 +60,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Irgi Adit Pratama | Fullstack Developer",
+    title: "Irgi Adit Pratama | Software Engineer & AI-Driven Product Innovation",
     description:
-      "Fullstack Developer & AI Enthusiast. Check out my latest projects and skills.",
+      "Software Engineer focused on AI-Driven Product Innovation and scalable systems.",
     images: ["/assets/coding-pov.png"], 
   },
   robots: {
