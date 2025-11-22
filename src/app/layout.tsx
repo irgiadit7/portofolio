@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://portofolio-pi-tawny-84.vercel.app/"), 
+  metadataBase: new URL("https://portofolio-irgi.vercel.app/"), 
   openGraph: {
    title: "Irgi Adit Pratama | Software Engineer & AI-Driven Product Innovation",
     description:
