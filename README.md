@@ -84,5 +84,5 @@ I am open to **freelance work**, **collaborations**, or just discussing **Roboti
 ---
 
 <p align="center">
-  <i>Crafted with ❤️, ☕, and a lot of &lt;code /&gt; by <b>&lt;Irgi /&gt;</b></i>
+  <i>Crafted with 💤☕ and a lot of &lt;code /&gt; by <b>&lt;Irgi /&gt;</b></i>
 </p>
